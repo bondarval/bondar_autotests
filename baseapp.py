@@ -11,17 +11,17 @@ class BasePage:
     def find_element(self, locator, time=10):
         return WebDriverWait(self.driver, time).until(
             ec.presence_of_element_located(locator),
-            message=f"Не удалось найти элемент по указателю {locator}")
+            message=f"Нет элемента с указателем {locator}")
 
     def find_elements(self, locator, time=10):
         return WebDriverWait(self.driver, time).until(
             ec.presence_of_all_elements_located(locator),
-            message=f"Не удалось найти элементы по указателю {locator}")
+            message=f"Нет элементов с указателем {locator}")
 
     def locate_visibility(self, locator, time=10):
         return WebDriverWait(self.driver, time).until(
             ec.visibility_of_element_located(locator),
-            message=f"Не удалось найти элементы по указателю {locator}")
+            message=f"Не отображается элемент с указателем {locator}")
 
     def go_to_site(self):
         return self.driver.get(self.base_url)

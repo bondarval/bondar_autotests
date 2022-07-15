@@ -6,19 +6,21 @@ class SearchLocators:
     LOCATOR_YANDEX_SEARCH_FIELD = (By.ID, "text")
     LOCATOR_YANDEX_SEARCH_BUTTON = (By.CLASS_NAME, "search2__button")
     LOCATOR_YANDEX_SUGGEST_LIST = (
+        By.CLASS_NAME, "mini-suggest__popup-content")
+    LOCATOR_YANDEX_FIRST_RESULT = (By.CSS_SELECTOR, "li.serp-item")
+    LOCATOR_YANDEX_RESULT_EXISTS = (
         By.CSS_SELECTOR,
-        '.mini-suggest__popup.mini-suggest__popup_theme_flat.mini-suggest__popup_visible'
-    )
-    LOCATOR_YANDEX_FIRST_RESULT = (By.CSS_SELECTOR, "h2>span")
-    LOCATOR_YANDEX_NAVIGATION_BAR = (By.CSS_SELECTOR, ".service__name")
+        "a[href='https://tensor.ru/']")
     LOCATOR_YANDEX_PICTURES = (By.CSS_SELECTOR, '[data-id="images"]')
+    LOCATOR_YANDEX_PICTURES_PAGE = (
+        By.CSS_SELECTOR,
+        "a[href='https://yandex.ru/images/?utm_source=main_stripe_big']")
     LOCATOR_YANDEX_OPEN_CATEGORY = (
         By.CSS_SELECTOR,
-        '.PopularRequestList-Item.PopularRequestList-Item_pos_0 > a > img'
-    )
+        '[class="PopularRequestList-Item PopularRequestList-Item_pos_0"]')
     LOCATOR_YANDEX_CATEGORY_TEXT = (
         By.CSS_SELECTOR,
-        '.PopularRequestList-Item.PopularRequestList-Item_pos_0 > a > div.PopularRequestList-SearchText'
+        'PopularRequestList-SearchText'
     )
     LOCATOR_YANDEX_FIRST_IMAGE = (
         By.XPATH,
