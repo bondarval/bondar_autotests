@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 
 class SearchLocators:
     """Определяет необходимые для тестирования элементы веб-страницы"""
-    LOCATOR_YANDEX_SEARCH_FIELD = (By.ID, "text")
+    LOCATOR_YANDEX_SEARCH_FIELD = (By.CSS_SELECTOR, ".search2__input input")
     LOCATOR_YANDEX_SEARCH_BUTTON = (By.CLASS_NAME, "search2__button")
     LOCATOR_YANDEX_SUGGEST_LIST = (
         By.CLASS_NAME, "mini-suggest__popup-content")
@@ -17,14 +17,14 @@ class SearchLocators:
         "a[href='https://yandex.ru/images/?utm_source=main_stripe_big']")
     LOCATOR_YANDEX_OPEN_CATEGORY = (
         By.CSS_SELECTOR,
-        '[class="PopularRequestList-Item PopularRequestList-Item_pos_0"]')
+        ".PopularRequestList-Item")
     LOCATOR_YANDEX_CATEGORY_TEXT = (
         By.CSS_SELECTOR,
-        'PopularRequestList-SearchText'
+        '.PopularRequestList-SearchText'
     )
     LOCATOR_YANDEX_FIRST_IMAGE = (
-        By.XPATH,
-        '//body/div[5]/div[1]/div[1]/div[1]/div/div[1]/div/a'
+        By.CSS_SELECTOR,
+        '.serp-item__link'
     )
     LOCATOR_YANDEX_IMAGE_WINDOW = (
         By.CSS_SELECTOR,
@@ -40,5 +40,5 @@ class SearchLocators:
     )
     LOCATOR_YANDEX_OPENED_IMAGE = (
         By.CSS_SELECTOR,
-        '.MediaViewer-View.MediaViewer_theme_fiji-View > div > img'
+        '.MMImageContainer'
     )

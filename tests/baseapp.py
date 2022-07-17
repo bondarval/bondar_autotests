@@ -23,5 +23,14 @@ class BasePage:
             ec.visibility_of_element_located(locator),
             message=f"Не отображается элемент с указателем {locator}")
 
+    def switch_windows(self, locator, time=10):
+        window_before = self.driver.window_handles[0]
+        # element = WebDriverWait(self.driver, time).until(
+        #     ec.presence_of_element_located(locator),
+        #     message=f"Нет элемента с указателем {locator}")
+        # element.click()
+        window_after = self.driver.window_handles[1]
+        return self.driver.switch_to.window(window_after)
+
     def go_to_site(self):
         return self.driver.get(self.base_url)

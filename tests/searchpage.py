@@ -44,14 +44,18 @@ class PictureSearchHelper(BasePage):
         return pictures
 
     def open_first_category(self):
-        return self.find_element(
-            SearchLocators.LOCATOR_YANDEX_OPEN_CATEGORY, time=2).click()
+        return self.switch_windows(
+            SearchLocators.LOCATOR_YANDEX_OPEN_CATEGORY, time=2)
 
     def check_category_search_text(self):
         search_text = self.find_element(
             SearchLocators.LOCATOR_YANDEX_CATEGORY_TEXT, time=2)
-        assert search_text in self.find_element(
+        text1 = search_text.text
+        search_text.click()
+        text_in_search_box = self.find_element(
             SearchLocators.LOCATOR_YANDEX_SEARCH_FIELD, time=2)
+        text2 = text_in_search_box.get_attribute("value")
+        assert text1 == text2
         return search_text
 
     def open_first_picture(self):

@@ -23,7 +23,7 @@ pip install -r requirements.txt
 ```
  - Инициализировать вебдрайвер для Сhrome.
 ```
-Для этого необходимо в файле conftest.py задать для Chrome аргумент executable_path="your/path/to/chromedriver.exe"
+Для этого необходимо в файле conftest.py задать для Chrome аргумент ("your/path/to/chromedriver.exe")
 ```
  - Запустить фреймворк pytest
 ```bash
