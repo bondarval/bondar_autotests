@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 class SearchLocators:
     """Определяет необходимые для тестирования элементы веб-страницы"""
     LOCATOR_YANDEX_SEARCH_FIELD = (By.CSS_SELECTOR, ".search2__input input")
-    LOCATOR_YANDEX_SEARCH_BUTTON = (By.CLASS_NAME, "search2__button")
+    LOCATOR_YANDEX_SEARCH_BUTTON = (By.CSS_SELECTOR, ".search2__button")
     LOCATOR_YANDEX_SUGGEST_LIST = (
         By.CLASS_NAME, "mini-suggest__popup-content")
     LOCATOR_YANDEX_FIRST_RESULT = (By.CSS_SELECTOR, "li.serp-item")
